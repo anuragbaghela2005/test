@@ -16,10 +16,10 @@ export const About: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 ">
       {/* Hero Section */}
-      <section className="pt-32 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="pt-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-lg p-6 sm:p-8 lg:p-12 hover:border-blue-500/50 transition-all">
+        <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Bridging Potential and Performance
           </h1>
@@ -33,7 +33,7 @@ export const About: React.FC = () => {
 
       {/* Why MAKS Solutions */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-slate-800/30">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-8">Why MAKS Solutions?</h2>
           <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 sm:p-6 lg:p-8 hover:border-blue-500/50 transition-all">
             <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed">
@@ -45,7 +45,7 @@ export const About: React.FC = () => {
 
       {/* Company Background */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-8">Company Background</h2>
           <div className="space-y-4 sm:space-y-6">
             <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed">

@@ -52,10 +52,10 @@ export const ForCandidates: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
       {/* Hero Section */}
-      <section className="pt-10 pb-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-10 lg:py-10">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Your Career, Guided Every Step of the Way
+      <section className="pt-12 pb-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-10 lg:py-10 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-lg p-6 sm:p-8 lg:p-12 hover:border-blue-500/50 transition-all">
+        <div className="max-w-7xl mx-auto text-center ">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            Your Career, Guided Every Step
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed">
             At MAKS Solutions, your career is more than a job search. It's a journey. Our candidate-first approach ensures you receive personalized guidance, access to meaningful opportunities, and ongoing support to help you achieve your professional goals.

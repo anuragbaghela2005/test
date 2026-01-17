@@ -29,15 +29,15 @@ export const Contact: React.FC = () => {
     },
     {
       region: 'India',
-      locations: ['Bangalore', 'Hyderabad']
+      locations: ['Ahmedabad', 'Jaipur']
     },
     {
       region: 'Canada',
       locations: ['Toronto']
     },
     {
-      region: 'Latin America',
-      locations: ['Mexico City']
+      region: 'Australia',
+      locations: ['Sydney', 'Melbourne']
     }
   ];
 
@@ -48,10 +48,10 @@ export const Contact: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-slate-900/60">
       {/* Hero Section */}
-      <section className="pt-32 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="pt-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-lg p-6 sm:p-8 lg:p-12 hover:border-blue-500/50 transition-all">
+        <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Let's Start the Conversation
           </h1>
