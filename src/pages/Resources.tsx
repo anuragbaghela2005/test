@@ -84,7 +84,7 @@ export function Resources() {
       </section>
 
       {/* Featured Content */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="news-insights" className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Latest Updates</span>

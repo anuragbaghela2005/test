@@ -119,7 +119,7 @@ export function ForCompanies() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="services" className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Service Areas</span>

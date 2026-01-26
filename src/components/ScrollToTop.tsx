@@ -2,11 +2,24 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      // If there's a hash, scroll to that element
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Account for fixed header
+          window.scrollBy(0, -80);
+        }, 100);
+      }
+    } else {
+      // Otherwise scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [pathname, hash]);
 
   return null;
 }
