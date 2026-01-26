@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Briefcase, Code, Users } from 'lucide-react';
 
 export function Hero() {
@@ -32,11 +33,13 @@ export function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
-              <a href="mailto:makssolutionsorg@gmail.com" className="hover:text-cyan-400 transition-colors">
-                  Learn More</a>
+            <Link
+              to="/contact"
+              className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center"
+            >
+              Learn More
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </button>
+            </Link>
             {/* <button className="px-8 py-4 bg-slate-800/50 backdrop-blur-sm text-white rounded-lg font-semibold text-lg border border-slate-700 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
               Learn More
             </button> */}

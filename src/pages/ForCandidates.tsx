@@ -1,136 +1,128 @@
-import React from 'react';
-import { Lightbulb, FileText, Briefcase, CheckCircle, Users, Award, Target, Headphones } from 'lucide-react';
+import { User, FileCheck, Target, TrendingUp, CheckCircle2 } from 'lucide-react';
 
-export const ForCandidates: React.FC = () => {
-  const steps = [
+export function ForCandidates() {
+  const processSteps = [
     {
+      icon: User,
       title: 'Personalized Career Consultation',
       description: 'Your story matters. We take the time to understand your skills, ambitions, and career vision so we can align you with opportunities that truly fit.',
-      icon: Lightbulb
+      color: 'from-blue-500 to-cyan-500',
     },
     {
+      icon: FileCheck,
       title: 'Skill Optimization & Preparation',
       description: 'Stand out with confidence. We help refine your resume, strengthen your professional brand, and prepare you for interviews through personalized coaching and feedback.',
-      icon: FileText
+      color: 'from-cyan-500 to-teal-500',
     },
     {
+      icon: Target,
       title: 'Opportunity Matching',
       description: 'You deserve more than just another job. With access to exclusive roles across top organizations, we connect you with positions that align with your expertise and long-term career goals.',
-      icon: Briefcase
+      color: 'from-blue-600 to-blue-400',
     },
     {
+      icon: TrendingUp,
       title: 'Placement & Continued Growth',
-      description: 'Our support doesn’t stop once you’re hired. We stay connected, offering career guidance, future opportunities, and ongoing professional development as your career evolves.',
-      icon: CheckCircle
-    }
-  ];
-
-  const whyChooseUs = [
-    {
-      title: 'Candidate-First Approach',
-      description: 'We prioritize your career goals, not just job placements.',
-      icon: Users
+      description: "Our support doesn't stop once you're hired. We stay connected, offering career guidance, future opportunities, and ongoing professional development as your career evolves.",
+      color: 'from-teal-500 to-cyan-500',
     },
-    {
-      title: 'Proven Industry Expertise',
-      description: 'Our recruiters understand market trends and what top employers are looking for.',
-      icon: Award
-    },
-    {
-      title: 'Right Role, Right Time',
-      description: 'We focus on long-term alignment, not quick fixes.',
-      icon: Target
-    },
-    {
-      title: 'End-to-End Support',
-      description: 'From consultation to placement and beyond, we’re with you at every stage.',
-      icon: Headphones
-    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-
+    <div className="pt-20">
       {/* Hero Section */}
-      <section className="pt-12 pb-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-10 lg:py-10 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-lg p-6 sm:p-8 lg:p-12 hover:border-blue-500/50 transition-all">
-        <div className="max-w-7xl mx-auto text-center ">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Your Career, Guided Every Step
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+          </div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            For <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Candidates</span>
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed">
-            At MAKS Solutions, your career is more than a job search. It's a journey. Our candidate-first approach ensures you receive personalized guidance, access to meaningful opportunities, and ongoing support to help you achieve your professional goals.
+          <p className="text-xl md:text-2xl text-slate-300 font-light mb-4">
+            Your Career, Guided Every Step of the Way
+          </p>
+          <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            At Maks Solutions, your career is more than a job search. It's a journey. Our candidate-first approach ensures you receive personalized guidance, access to meaningful opportunities, and ongoing support to help you achieve your professional goals.
           </p>
         </div>
       </section>
 
-      {/* 4-Step Hiring Process */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-slate-900/60">
+      {/* Process Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 text-center">
-            Our 4-Step Hiring Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-            {steps.map((step, index) => {
-              const Icon = step.icon; return (<div key={index} className="group">
-                <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-5 sm:p-6 lg:p-8 hover:border-green-500/80 transition-all hover:bg-slate-800/80 h-full transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/10 duration-300">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-600/30 to-green-400/10 border border-green-500/30 flex items-center justify-center flex-shrink-0 group-hover:from-green-600/50 group-hover:to-green-400/20 transition-all">
-                      <Icon className="w-8 h-8 text-green-400 group-hover:scale-110 transition-transform" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">{step.title}</h3>
-                      <p className="text-sm sm:text-base text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors">{step.description}</p>
-                    </div>
-                  </div>
+          <div className="text-center mb-16">
+            <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Our Process</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+              Our 4-Step <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Hiring Process</span>
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              A comprehensive approach designed to help you succeed at every stage of your career journey.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {processSteps.map((step, index) => (
+              <div
+                key={index}
+                className="group relative p-8 bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
+                <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <step.icon className="w-8 h-8 text-white" />
                 </div>
-              </div>);
-            })}
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-slate-400 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      {/* Benefits Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10 text-center">
-            Why Choose MAKS Solutions?
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whyChooseUs.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 text-center hover:border-green-500/70 transition-all">
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-green-500/20 flex items-center justify-center">
-                    <Icon className="w-7 h-7 text-green-400" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mt-4 mb-6">
+                Your Success is Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Priority</span>
+              </h2>
+              <div className="space-y-4 mt-8">
+                {[
+                  'Personalized career guidance tailored to your goals',
+                  'Access to exclusive opportunities with top companies',
+                  'Expert resume and interview preparation support',
+                  'Ongoing career development and growth opportunities',
+                  'Long-term partnership beyond just placement',
+                ].map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
+                    <p className="text-slate-300 text-lg">{benefit}</p>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-slate-300 text-sm">{item.description}</p>
-                </div>
-              );
-            })}
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="aspect-video bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl border border-slate-700 flex items-center justify-center overflow-hidden">
+                <img
+                  src="https://www.1stformationsblog.co.uk/wp-content/uploads/2025/01/Shutterstock_2266633617.jpg"
+                  alt="Global Talent Network"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-r from-green-600/10 to-emerald-600/10 border-y border-green-500/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Ready to Start Your New Journey?
-          </h2>
-          <p className="text-slate-300 mb-8">
-            Speak directly with our career consultants and take the next step toward your future.
-          </p>
-
-          <a
-            href="tel:+918460135272"
-            className="inline-block px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/30"
-          >
-            Start Your Journey Today
-          </a>
-        </div>
-      </section>
-
     </div>
   );
-};
+}

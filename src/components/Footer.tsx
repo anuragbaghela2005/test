@@ -1,4 +1,5 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -21,16 +22,16 @@ export function Footer() {
             <h4 className="text-white font-semibold text-lg mb-4">Services</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">Custom Software Development</a>
+                <Link to="/for-companies" className="text-slate-400 hover:text-cyan-400 transition-colors">For Companies</Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">IT Staffing Solutions</a>
+                <Link to="/for-candidates" className="text-slate-400 hover:text-cyan-400 transition-colors">For Candidates</Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">US Recruitment</a>
+                <Link to="/resources" className="text-slate-400 hover:text-cyan-400 transition-colors">Resources</Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">Consulting Services</a>
+                <Link to="/contact" className="text-slate-400 hover:text-cyan-400 transition-colors">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -39,16 +40,16 @@ export function Footer() {
             <h4 className="text-white font-semibold text-lg mb-4">Company</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">About Us</a>
+                <Link to="/about" className="text-slate-400 hover:text-cyan-400 transition-colors">About Us</Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">Careers</a>
+                <Link to="/for-companies" className="text-slate-400 hover:text-cyan-400 transition-colors">Our Services</Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">Case Studies</a>
+                <Link to="/resources" className="text-slate-400 hover:text-cyan-400 transition-colors">News & Insights</Link>
               </li>
               <li>
-                <a href="#Footer" className="text-slate-400 hover:text-cyan-400 transition-colors">Contact</a>
+                <Link to="/contact" className="text-slate-400 hover:text-cyan-400 transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
@@ -64,7 +65,12 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-slate-400">
                 <Phone className="w-5 h-5 text-cyan-400" />
-                <span>+918460135272</span>
+                <span><a
+                  href="tel:+918460135272"
+                  className="hover:text-cyan-300 transition-colors"
+                >
+                  +91 8460135272
+                </a></span>
               </li>
               <li className="flex items-center gap-3 text-slate-400">
                 <MapPin className="w-5 h-5 text-cyan-400" />
@@ -83,7 +89,7 @@ export function Footer() {
                 <Github className="w-5 h-5 text-white" />
               </a>
             </div>*/}
-          </div> 
+          </div>
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -94,7 +100,7 @@ export function Footer() {
             <a href="#" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors">Privacy Policy</a>
             <a href="#" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors">Terms of Service</a>
             <a href="#" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors">Cookie Policy</a>
-          </div> */} 
+          </div> */}
         </div>
       </div>
     </footer>

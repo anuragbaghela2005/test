@@ -14,11 +14,11 @@ export function Focus() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
               Leading the Way in{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                US Recruitment
+                Global Recruitment
               </span>
             </h2>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-              Our first focus is delivering exceptional IT recruitment services across the United States.
+              Our first focus is delivering exceptional IT recruitment services across the Globe.
               We connect top-tier talent with innovative companies, building teams that drive success.
             </p>
 
@@ -28,8 +28,8 @@ export function Focus() {
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold text-lg mb-1">Nationwide Coverage</h4>
-                  <p className="text-slate-400 text-sm">Comprehensive recruitment services across all US states</p>
+                  <h4 className="text-white font-semibold text-lg mb-1">Worldwide Coverage</h4>
+                  <p className="text-slate-400 text-sm">Comprehensive recruitment services across all US states, Australia, and Europe</p>
                 </div>
               </div>
 

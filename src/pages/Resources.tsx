@@ -1,109 +1,126 @@
-import React, { useState } from 'react';
-import { Bell, Share2, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Mail, FileText, Newspaper, Users, ArrowRight } from 'lucide-react';
 
-export const Resources: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubscribed(true);
-    setEmail('');
-    setTimeout(() => setSubscribed(false), 3000);
-  };
-
+export function Resources() {
   const featuredContent = [
     {
-      type: 'Featured News',
-      title: 'Celebrating 40 Years of MAKS Solutions: A Legacy of Connecting People and Opportunities',
+      slug: 'celebrating-4-years',
+      type: 'News',
+      title: 'Celebrating 4 Years of Maks Solutions: A Legacy of Connecting People and Opportunities',
       description: 'Four decades of building careers, empowering businesses, and creating meaningful connections across industries.',
-      readTime: '5 min read'
+      icon: Newspaper,
+      color: 'from-blue-500 to-cyan-500',
     },
     {
-      type: 'Featured Blog',
-      title: 'Why MAKS Solutions Is a Trusted Employment Agency in Charlotte, North Carolina',
-      description: 'Discover what sets MAKS Solutions apart and why businesses and professionals continue to choose us as their staffing partner.',
-      readTime: '8 min read'
+      slug: 'trusted-employment-agency-charlotte',
+      type: 'Blog',
+      title: 'Why Maks Solutions Is a Trusted Employment Agency in Charlotte, North Carolina',
+      description: 'Discover what sets Maks Solutions apart and why businesses and professionals continue to choose us as their staffing partner.',
+      icon: FileText,
+      color: 'from-cyan-500 to-teal-500',
     },
     {
-      type: 'Recent Press Release',
-      title: 'MAKS Solutions Unveils New Brand Identity in Celebration of 40 Years of Excellence',
-      description: 'Marking 40 years as a Total Talent Solutions Provider with a refreshed brand and a forward-looking vision.',
-      readTime: '4 min read'
-    }
+      slug: 'new-brand-identity',
+      type: 'Press Release',
+      title: 'Maks Solutions Unveils New Brand Identity in Celebration of 4+ Years of Excellence',
+      description: 'Marking 4 years as a Total Talent Solutions Provider with a refreshed brand and a forward-looking vision.',
+      icon: Newspaper,
+      color: 'from-blue-600 to-blue-400',
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="pt-20">
       {/* Hero Section */}
-      <section className="pt-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Stay Informed and Inspired
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+          </div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Resources</span>
           </h1>
-          <p className="text-sm sm:text-base lg:text-lg text-slate-300 mb-6 sm:mb-8 leading-relaxed">
-            Explore the latest MAKS Solutions news, expert insights, and industry perspectives shaping the future of recruitment and career development.
+          <p className="text-xl md:text-2xl text-slate-300 font-light mb-4">
+            Stay Informed and Inspired
+          </p>
+          <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            Explore the latest Maks Solutions news, expert insights, and industry perspectives shaping the future of recruitment and career development.
           </p>
         </div>
       </section>
 
       {/* Newsletter Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-purple-600/10 to-pink-600/10 border-y border-purple-500/20">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-5 sm:p-6 lg:p-8 hover:border-purple-500/50 transition-all">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
-              <Bell className="w-8 h-8 text-purple-400 flex-shrink-0" />
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Subscribe to Our Newsletter</h2>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="p-8 bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-700">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                <Mail className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-white">Subscribe to Our Newsletter</h2>
+                <p className="text-slate-400">Stay up to date with hiring trends, career advice, company updates, and thought leadership delivered straight to your inbox.</p>
+              </div>
             </div>
-            <p className="text-sm sm:text-base lg:text-lg text-slate-300 mb-5 sm:mb-6 leading-relaxed">
-              Stay up to date with hiring trends, career advice, company updates, and thought leadership delivered straight to your inbox.
-            </p>
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
+            <form className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                className="flex-1 px-4 py-2.5 sm:py-3 bg-slate-700 border border-slate-600 rounded-lg text-white text-sm sm:text-base placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                placeholder="Enter your email address"
+                className="flex-1 px-6 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
               />
               <button
                 type="submit"
-                className="px-6 py-2.5 sm:py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg transition-all transform hover:scale-105 whitespace-nowrap text-sm sm:text-base"
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
               >
                 Subscribe
               </button>
             </form>
-            {subscribed && (
-              <p className="mt-3 text-green-400 font-semibold text-sm sm:text-base">✓ Thank you for subscribing!</p>
-            )}
           </div>
         </div>
       </section>
 
       {/* Featured Content */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 sm:mb-12">MAKS Solutions News & Expert Perspectives</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="text-center mb-16">
+            <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Latest Updates</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+              Maks Solutions News & Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Perspectives</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredContent.map((item, index) => (
-              <div key={index} className="group bg-slate-800/50 border border-slate-700 rounded-lg overflow-hidden hover:border-purple-500/80 hover:bg-slate-800/80 transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 duration-300 flex flex-col cursor-pointer">
-                <div className="p-5 sm:p-6 lg:p-8 h-full flex flex-col">
-                  <span className="inline-block w-fit px-3 py-1 bg-purple-600/30 border border-purple-500/50 rounded-full text-purple-300 text-xs sm:text-sm font-semibold mb-4">
-                    {item.type}
-                  </span>
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-slate-300 mb-4 flex-grow leading-relaxed group-hover:text-slate-200 transition-colors">
-                    {item.description}
-                  </p>
-                  <div className="flex items-center justify-between pt-4 border-t border-slate-700">
-                    <span className="text-slate-400 text-xs sm:text-sm">{item.readTime}</span>
-                    <ExternalLink className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
+              <div
+                key={index}
+                className="group relative p-8 bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105"
+              >
+                <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
+                <div className={`w-14 h-14 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <item.icon className="w-7 h-7 text-white" />
                 </div>
+                <div className="text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-2">
+                  {item.type === 'News' ? 'Featured News' : item.type === 'Blog' ? 'Featured Blog' : 'Recent Press Release'}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-slate-400 leading-relaxed mb-6">
+                  {item.description}
+                </p>
+                <Link
+                  to={`/resources/${item.slug}`}
+                  className="inline-flex items-center text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition-colors group"
+                >
+                  <span className="flex items-center">
+                    Read Full Article
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
               </div>
             ))}
           </div>
@@ -111,20 +128,27 @@ export const Resources: React.FC = () => {
       </section>
 
       {/* Referral Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto bg-gradient-to-br from-green-600/20 to-emerald-600/10 border border-green-500/30 rounded-lg p-6 sm:p-8 lg:p-12 text-center hover:border-green-500/50 transition-all">
-          <div className="flex justify-center mb-4 sm:mb-6">
-            <Share2 className="w-10 h-10 sm:w-12 lg:w-14 text-green-400" />
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="p-12 bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-700">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Users className="w-8 h-8 text-white" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Know Someone <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Amazing</span>?
+            </h2>
+            <p className="text-lg text-slate-400 mb-8 leading-relaxed">
+              Refer a skilled professional or a business in need of talent. Together, we'll help them take the next step toward success.
+            </p>
+            <a
+              href="mailto:makssolutionsorg@gmail.com?subject=Referral Inquiry"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+            >
+              Make a Referral
+            </a>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">Know Someone Amazing?</h2>
-          <p className="text-sm sm:text-base lg:text-lg text-slate-300 mb-6 sm:mb-8 leading-relaxed">
-            Refer a skilled professional or a business in need of talent. Together, we'll help them take the next step toward success.
-          </p>
-          <Link to="/contact" className="inline-block px-6 sm:px-8 py-2.5 sm:py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/30 text-sm sm:text-base">
-            Make a Referral
-          </Link>
         </div>
       </section>
     </div>
   );
-};
+}
