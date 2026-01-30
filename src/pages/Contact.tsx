@@ -258,10 +258,10 @@ export function Contact() {
                     <div>
                       <h4 className="text-white font-semibold mb-1">Phone</h4>
                       <a
-                        href="tel:+918460135272"
+                        href="tel:+14012693358"
                         className="text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
-                        +91 8460135272
+                        (+1) 401-269-3358
                       </a>
                     </div>
                   </div>
@@ -305,10 +305,10 @@ export function Contact() {
                     <div>
                       <h4 className="text-white font-semibold mb-1">Phone</h4>
                       <a
-                        href="tel:+14012693358"
+                        href="tel:+918460135272"
                         className="text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
-                        (+1) 401-269-3358
+                        +91 8460135272
                       </a>
                     </div>
                   </div>
