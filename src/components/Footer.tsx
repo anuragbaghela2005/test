@@ -59,15 +59,6 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="/contact"
-                  onClick={handleLinkClick('/contact')}
-                  className="text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer"
-                >
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a
                   href="/for-companies"
                   onClick={handleLinkClick('/for-companies')}
                   className="text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer"
@@ -82,6 +73,15 @@ export function Footer() {
                   className="text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer"
                 >
                   For Candidates
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  onClick={handleLinkClick('/contact')}
+                  className="text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer"
+                >
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -121,7 +121,7 @@ export function Footer() {
           </div> */}
 
           <div>
-            <h4 className="text-white font-semibold text-lg mb-4">US Branch</h4>
+            <h4 className="text-white font-semibold text-lg mb-4">USA Headquarter</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-slate-400">
                 <Mail className="w-5 h-5 text-cyan-400" />
