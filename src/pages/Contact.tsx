@@ -231,6 +231,7 @@ export function Contact() {
                 </button>
               </form>
             </div>
+            
             {/* Contact Information */}
             <div>
               <div className="p-8 bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-700">

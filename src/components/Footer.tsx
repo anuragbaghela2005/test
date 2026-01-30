@@ -59,11 +59,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="/about"
-                  onClick={handleLinkClick('/about')}
+                  href="/contact"
+                  onClick={handleLinkClick('/contact')}
                   className="text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer"
                 >
-                  About Us
+                  Contact Us
                 </a>
               </li>
               <li>
@@ -121,7 +121,7 @@ export function Footer() {
           </div> */}
 
           <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Get in Touch</h4>
+            <h4 className="text-white font-semibold text-lg mb-4">US Branch</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-slate-400">
                 <Mail className="w-5 h-5 text-cyan-400" />
@@ -132,14 +132,38 @@ export function Footer() {
               <li className="flex items-center gap-3 text-slate-400">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span><a
-                        href="tel:+918460135272" className="hover:text-cyan-400 transition-colors"
-                      >
-                        +91 8460135272
-                      </a></span>
+                  href="tel:+14012693358" className="hover:text-cyan-400 transition-colors"
+                >
+                  +1 (401) 269-3358
+                </a></span>
               </li>
               <li className="flex items-center gap-3 text-slate-400">
                 <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>Rajasthan, India</span>
+                <span>Kingston, Rhode Island, USA</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">India Branch</h4>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-slate-400">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <a href="mailto:info@makssolutions.org" className="hover:text-cyan-400 transition-colors">
+                  info@makssolutions.org
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-slate-400">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span><a
+                  href="tel:+918460135272" className="hover:text-cyan-400 transition-colors"
+                >
+                  +91 8460135272
+                </a></span>
+              </li>
+              <li className="flex items-center gap-3 text-slate-400">
+                <MapPin className="w-5 h-5 text-cyan-400" />
+                <span>Udaipur, Rajasthan, India</span>
               </li>
             </ul>
 
@@ -155,7 +179,10 @@ export function Footer() {
               </a>
             </div>*/}
           </div>
+
         </div>
+
+
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-400 text-sm">
